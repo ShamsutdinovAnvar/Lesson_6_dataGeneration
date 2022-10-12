@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.wegotrip'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation ("com.codeborne:selenide:6.8.1",
+            'org.junit.jupiter:junit-jupiter:5.9.0')
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
