@@ -2,27 +2,15 @@ package com.wegotrip.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.wegotrip.pages.RegistrationFormPage;
+import com.wegotrip.pages.testData.UserTestData;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
 public class RegistrationFormTest {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-        String firstName = "Anvar";
-        String lastName = "Shamsutdinov";
-        String email = "a.shams@gmail.com";
-        String gender = "Male";
-        String mobile = "0123456789";
-        String day = "13";
-        String month = "August";
-        String year = "1987";
-        String birthDay = day + " " + month + "," + year;
-        String subjects = "English";
-        String hobbie = "Sports";
-        String picture = "image.png";
-        String address = "Lenin str.1";
-        String state = "NCR";
-        String city = "Noida";
+
+
 
         @BeforeAll
         static void setUp() {
@@ -34,29 +22,29 @@ public class RegistrationFormTest {
         @Test
         void checkFormTest() {
             registrationFormPage.openPage()
-                    .setFirstName(firstName)
-                    .setLastName(lastName)
-                    .setUserEmail(email)
-                    .setGender(gender)
-                    .setUserNumber(mobile)
-                    .setBirthDate(day, month, year)
-                    .subjectsInput(subjects)
-                    .setHobbies(hobbie)
-                    .uploadPicture(picture)
-                    .setAddress(address, state, city)
+                    .setFirstName(UserTestData.firstName)
+                    .setLastName(UserTestData.lastName)
+                    .setUserEmail(UserTestData.email)
+                    .setGender(UserTestData.gender)
+                    .setUserNumber(UserTestData.mobile)
+                    .setBirthDate(UserTestData.day, UserTestData.month, UserTestData.year)
+                    .subjectsInput(UserTestData.subjects)
+                    .setHobbies(UserTestData.hobbie)
+                    .uploadPicture(UserTestData.picture)
+                    .setAddress(UserTestData.address, UserTestData.state, UserTestData.city)
                     .clickSubmit();
             //Check results
             registrationFormPage.checkResultsTable()
-                    .checkResult("Student Name", firstName + " " + lastName)
-                    .checkResult("Student Email", email)
-                    .checkResult("Gender", gender)
-                    .checkResult("Mobile", mobile)
-                    .checkResult("Date of Birth", birthDay)
-                    .checkResult("Subjects", subjects)
-                    .checkResult("Hobbies", hobbie)
-                    .checkResult("Picture", picture)
-                    .checkResult("Address", address)
-                    .checkResult("State and City", state + " " + city);
+                    .checkResult("Student Name", UserTestData.firstName + " " + UserTestData.lastName)
+                    .checkResult("Student Email", UserTestData.email)
+                    .checkResult("Gender", UserTestData.gender)
+                    .checkResult("Mobile", UserTestData.mobile)
+                    .checkResult("Date of Birth", UserTestData.birthDay)
+                    .checkResult("Subjects", UserTestData.subjects)
+                    .checkResult("Hobbies", UserTestData.hobbie)
+                    .checkResult("Picture", UserTestData.picture)
+                    .checkResult("Address", UserTestData.address)
+                    .checkResult("State and City", UserTestData.state + " " + UserTestData.city);
 
         }
     }
