@@ -2,7 +2,7 @@ package com.wegotrip.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.wegotrip.pages.RegistrationFormPage;
-import com.wegotrip.pages.testData.UserTestData;
+import com.wegotrip.pages.testdata.UserTestData;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

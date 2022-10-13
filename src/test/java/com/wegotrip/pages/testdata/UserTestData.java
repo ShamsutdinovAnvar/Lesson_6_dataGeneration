@@ -1,4 +1,4 @@
-package com.wegotrip.pages.testData;
+package com.wegotrip.pages.testdata;
 
 import com.github.javafaker.Faker;
 import com.wegotrip.pages.utils.RandomUtil;
