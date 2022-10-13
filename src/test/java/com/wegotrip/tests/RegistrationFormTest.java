@@ -6,11 +6,8 @@ import com.wegotrip.pages.testData.UserTestData;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
 public class RegistrationFormTest {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
-
-
 
         @BeforeAll
         static void setUp() {
@@ -45,7 +42,6 @@ public class RegistrationFormTest {
                     .checkResult("Picture", UserTestData.picture)
                     .checkResult("Address", UserTestData.address)
                     .checkResult("State and City", UserTestData.state + " " + UserTestData.city);
-
         }
     }
 

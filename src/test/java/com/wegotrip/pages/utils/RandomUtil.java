@@ -11,7 +11,6 @@ public class RandomUtil {
                 "January", "February", "March", "April",
                 "May", "June", "July", "August",
                 "September", "October", "November", "December");
-
         return months.get(new Random().nextInt(months.size()));
     }
 }

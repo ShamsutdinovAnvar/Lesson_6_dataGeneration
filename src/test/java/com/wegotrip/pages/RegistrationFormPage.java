@@ -3,7 +3,6 @@ package com.wegotrip.pages;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-
 import com.wegotrip.pages.components.CalendarComponent;
 import com.wegotrip.pages.components.AddressComponent;
 import com.wegotrip.pages.components.ResultComponent;
@@ -71,7 +70,6 @@ public class RegistrationFormPage {
         resultComponent.checkVisible();
         return this;
     }
-
     public RegistrationFormPage checkResult(String key, String value) {
         resultComponent.checkResult(key, value);
         return this;
